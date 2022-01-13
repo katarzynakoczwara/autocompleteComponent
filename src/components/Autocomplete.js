@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
 
-const Autocomplete = ({array}) => {
+const Autocomplete = ({array, addItem}) => {
 
     const [inputValue, setInputValue] = useState([]);
     const [suggestions, setSuggestions] = useState(array);
