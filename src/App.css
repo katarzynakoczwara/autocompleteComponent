@@ -1,0 +1,118 @@
+:root {
+  --white-color: #ffffff;
+  --grey-color: #e1e5f2;
+  --light-blue-color: #bfdbf7;
+  --dark-blue-color: #2e5eaa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {  
+  font-family: sans-serif;  
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;  
+}
+
+.container {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 2rem;
+}
+
+.input {
+  padding: .5em .25em;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.input:focus {
+  outline: 1px solid var(--light-blue-color);
+}
+
+.input, .list-container {  
+  font-size: 1.4rem;
+  border: 1px solid var(--grey-color);  
+  width: 100%; 
+}
+
+.list-container {
+  max-height: 20em;
+  overflow-y: auto;
+  list-style-type: none;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.listItem {
+  padding: .5em .25em;
+  width: 100%; 
+}
+
+.listItem:hover {
+  background-color: var(--dark-blue-color);
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.listItem.active {
+  background-color: var(--dark-blue-color);
+  color: var(--white-color);
+}
+
+.selected-container {
+  margin-bottom: 1.4em;
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+}
+
+.selected-item {
+  margin: .25em  .25em .25em 0;
+  padding: .5em 0.25em;
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  color: var(--white-color);
+  background-color: var(--dark-blue-color);
+  border-radius: 4px;
+}
+
+.selected-item:first-child {
+  /* margin: .5em 0; */
+}
+
+.selected-item .icon {
+  margin-left: .4em;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+.selected-item .icon:hover {
+  color: rgba(255,255,255,.5)
+}
+
+
+
