@@ -27,7 +27,8 @@ const Autocomplete = ({array}) => {
                     setSelectedSuggestions([...selectedSuggestions, inputValueToUpperCase]);
                 } 
                 setInputValue('');
-                setSuggestions([...array, {id: array.length + 1, name: inputValueToUpperCase}]);  
+                addItem(inputValue);
+                setSuggestions(array);
             }}     
             setShowSuggestions(false);
         }        
